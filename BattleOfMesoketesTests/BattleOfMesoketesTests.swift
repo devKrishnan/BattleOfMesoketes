@@ -51,6 +51,7 @@ class BattleOfMesoketesTests: XCTestCase {
 
     }
     func testAttack(){
+    
         let json = [
             "tribe": [ "name": "1" ],
             "direction": "N",
@@ -69,6 +70,55 @@ class BattleOfMesoketesTests: XCTestCase {
             ] as [String : Any]
         let invalidAttack = Attack(attackJSON: invalidJson)
         XCTAssertNotNil(invalidAttack, "Valid attack data")
+    }
+    func testDayModel(){
+        let json : [String : Any] = ["day" : "1",
+                                     "attacks": [
+                                        [
+                                            "tribe": [ "name": "1" ],
+                                            "direction": "N",
+                                            "strength": 3
+                                        ],
+                                        [
+                                            "tribe": [ "name": "2" ],
+                                            "direction": "S",
+                                            "strength": 4
+                                        ],
+                                        [
+                                            "tribe": [ "name": "3" ],
+                                            "direction": "W",
+                                            "strength": 2
+                                        ]
+            ]
+        ]
+        let day = Day(dayJSON: json)
+        XCTAssertNotNil(day, "Invalid JSON")
+        XCTAssertEqual(day?.dayID, "1", "Invalid day ID")
+        XCTAssertNotEqual(day?.dayID, "2", "Valid day ID")
+        XCTAssertEqual(day?.attacks.count, 3, "Invalid attacks count")
+        XCTAssertNotEqual(day?.attacks.count, 1, "Valid attacks count")
+        
+        let invalidJson : [String : Any] = ["day" : 1,
+                                     "attacks": [
+                                        [
+                                            "tribe": [ "name": "1" ],
+                                            "direction": "N",
+                                            "strength": 3
+                                        ],
+                                        [
+                                            "tribe": [ "name": "2" ],
+                                            "direction": "S",
+                                            "strength": 4
+                                        ],
+                                        [
+                                            "tribe": [ "name": "3" ],
+                                            "direction": "W",
+                                            "strength": 2
+                                        ]
+            ]
+        ]
+        let invalidDay = Day(dayJSON: invalidJson)
+        XCTAssertNil(invalidDay, "valid  JSON")
     }
     func testPerformanceExample() {
         // This is an example of a performance test case.

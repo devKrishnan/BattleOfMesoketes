@@ -49,3 +49,22 @@ struct Attack{
         
     }
 }
+struct Day {
+    var dayID : String
+    var attacks : [Attack] = []
+    init?(dayJSON : [String:Any]) {
+        guard let tempID = dayJSON[Constants.dayKey] else { return nil }
+        guard let tempAttacks = dayJSON[Constants.attacksKey] else { return nil }
+        guard let dayId = tempID as? String else { return nil }
+        self.dayID = dayId
+        guard let attackList = tempAttacks as? [[String:Any]] else { return nil }
+        for attackDict in attackList {
+            if let attack = Attack(attackJSON: attackDict){
+                self.attacks.append(attack)
+            }else{
+                return nil
+            }
+            
+        }
+    }
+}

@@ -1,7 +1,7 @@
 {"wars":
     [
      {"warID": 1, "days":
-     [{"day" : 1,
+     [{"day" : "1",
       "attacks": [
                   {
                   "tribe": { "name": "1" },
@@ -21,7 +21,7 @@
                   ]
       },
       {
-      "day" : 2,
+      "day" : "2",
       "attacks": [
                   {
                   "tribe": { "name": "1" },
@@ -41,7 +41,7 @@
                   ]
       },
       {
-      "day" : 3,
+      "day" : "3",
       "attacks": [
                   {
                   "tribe": { "name": "1" },
@@ -61,7 +61,7 @@
                   ]
       }
       ]},
-     {"warID": 2, "days": [{"day" : 1,
+     {"warID": 2, "days": [{"day" : "1",
                            "attacks": [
                                        {
                                        "tribe": { "name": "1" },
@@ -81,7 +81,7 @@
                                        ]
                            },
                            {
-                           "day" : 2,
+                           "day" : "2",
                            "attacks": [
                                        {
                                        "tribe": { "name": "2" },
@@ -100,7 +100,7 @@
                                        }
                                        ]
                            },{
-                           "day" : 3,
+                           "day" : "3",
                            "attacks": [
                                        {
                                        "tribe": { "name": "1" },
