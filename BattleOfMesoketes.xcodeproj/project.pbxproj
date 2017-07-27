@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C42EC8961F29E5F000864FBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EC8951F29E5F000864FBA /* AppDelegate.swift */; };
+		C42EC8981F29E5F000864FBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EC8971F29E5F000864FBA /* ViewController.swift */; };
+		C42EC89A1F29E5F000864FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42EC8991F29E5F000864FBA /* Assets.xcassets */; };
+		C42EC89D1F29E5F000864FBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42EC89B1F29E5F000864FBA /* Main.storyboard */; };
+		C42EC8A81F29E5F100864FBA /* BattleOfMesoketesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EC8A71F29E5F100864FBA /* BattleOfMesoketesTests.swift */; };
+		C42EC8B31F29E5F100864FBA /* BattleOfMesoketesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EC8B21F29E5F100864FBA /* BattleOfMesoketesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C42EC8A41F29E5F100864FBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C42EC88A1F29E5F000864FBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C42EC8911F29E5F000864FBA;
+			remoteInfo = BattleOfMesoketes;
+		};
+		C42EC8AF1F29E5F100864FBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C42EC88A1F29E5F000864FBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C42EC8911F29E5F000864FBA;
+			remoteInfo = BattleOfMesoketes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C42EC8921F29E5F000864FBA /* BattleOfMesoketes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleOfMesoketes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42EC8951F29E5F000864FBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C42EC8971F29E5F000864FBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C42EC8991F29E5F000864FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C42EC89C1F29E5F000864FBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C42EC89E1F29E5F000864FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C42EC8A31F29E5F100864FBA /* BattleOfMesoketesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleOfMesoketesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42EC8A71F29E5F100864FBA /* BattleOfMesoketesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleOfMesoketesTests.swift; sourceTree = "<group>"; };
+		C42EC8A91F29E5F100864FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C42EC8AE1F29E5F100864FBA /* BattleOfMesoketesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleOfMesoketesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42EC8B21F29E5F100864FBA /* BattleOfMesoketesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleOfMesoketesUITests.swift; sourceTree = "<group>"; };
+		C42EC8B41F29E5F100864FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C42EC88F1F29E5F000864FBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C42EC8A01F29E5F100864FBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C42EC8AB1F29E5F100864FBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C42EC8891F29E5F000864FBA = {
+			isa = PBXGroup;
+			children = (
+				C42EC8941F29E5F000864FBA /* BattleOfMesoketes */,
+				C42EC8A61F29E5F100864FBA /* BattleOfMesoketesTests */,
+				C42EC8B11F29E5F100864FBA /* BattleOfMesoketesUITests */,
+				C42EC8931F29E5F000864FBA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C42EC8931F29E5F000864FBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C42EC8921F29E5F000864FBA /* BattleOfMesoketes.app */,
+				C42EC8A31F29E5F100864FBA /* BattleOfMesoketesTests.xctest */,
+				C42EC8AE1F29E5F100864FBA /* BattleOfMesoketesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C42EC8941F29E5F000864FBA /* BattleOfMesoketes */ = {
+			isa = PBXGroup;
+			children = (
+				C42EC8951F29E5F000864FBA /* AppDelegate.swift */,
+				C42EC8971F29E5F000864FBA /* ViewController.swift */,
+				C42EC8991F29E5F000864FBA /* Assets.xcassets */,
+				C42EC89B1F29E5F000864FBA /* Main.storyboard */,
+				C42EC89E1F29E5F000864FBA /* Info.plist */,
+			);
+			path = BattleOfMesoketes;
+			sourceTree = "<group>";
+		};
+		C42EC8A61F29E5F100864FBA /* BattleOfMesoketesTests */ = {
+			isa = PBXGroup;
+			children = (
+				C42EC8A71F29E5F100864FBA /* BattleOfMesoketesTests.swift */,
+				C42EC8A91F29E5F100864FBA /* Info.plist */,
+			);
+			path = BattleOfMesoketesTests;
+			sourceTree = "<group>";
+		};
+		C42EC8B11F29E5F100864FBA /* BattleOfMesoketesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C42EC8B21F29E5F100864FBA /* BattleOfMesoketesUITests.swift */,
+				C42EC8B41F29E5F100864FBA /* Info.plist */,
+			);
+			path = BattleOfMesoketesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C42EC8911F29E5F000864FBA /* BattleOfMesoketes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C42EC8B71F29E5F100864FBA /* Build configuration list for PBXNativeTarget "BattleOfMesoketes" */;
+			buildPhases = (
+				C42EC88E1F29E5F000864FBA /* Sources */,
+				C42EC88F1F29E5F000864FBA /* Frameworks */,
+				C42EC8901F29E5F000864FBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BattleOfMesoketes;
+			productName = BattleOfMesoketes;
+			productReference = C42EC8921F29E5F000864FBA /* BattleOfMesoketes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C42EC8A21F29E5F100864FBA /* BattleOfMesoketesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C42EC8BA1F29E5F100864FBA /* Build configuration list for PBXNativeTarget "BattleOfMesoketesTests" */;
+			buildPhases = (
+				C42EC89F1F29E5F100864FBA /* Sources */,
+				C42EC8A01F29E5F100864FBA /* Frameworks */,
+				C42EC8A11F29E5F100864FBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C42EC8A51F29E5F100864FBA /* PBXTargetDependency */,
+			);
+			name = BattleOfMesoketesTests;
+			productName = BattleOfMesoketesTests;
+			productReference = C42EC8A31F29E5F100864FBA /* BattleOfMesoketesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C42EC8AD1F29E5F100864FBA /* BattleOfMesoketesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C42EC8BD1F29E5F100864FBA /* Build configuration list for PBXNativeTarget "BattleOfMesoketesUITests" */;
+			buildPhases = (
+				C42EC8AA1F29E5F100864FBA /* Sources */,
+				C42EC8AB1F29E5F100864FBA /* Frameworks */,
+				C42EC8AC1F29E5F100864FBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C42EC8B01F29E5F100864FBA /* PBXTargetDependency */,
+			);
+			name = BattleOfMesoketesUITests;
+			productName = BattleOfMesoketesUITests;
+			productReference = C42EC8AE1F29E5F100864FBA /* BattleOfMesoketesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C42EC88A1F29E5F000864FBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Test;
+				TargetAttributes = {
+					C42EC8911F29E5F000864FBA = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+					C42EC8A21F29E5F100864FBA = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C42EC8911F29E5F000864FBA;
+					};
+					C42EC8AD1F29E5F100864FBA = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C42EC8911F29E5F000864FBA;
+					};
+				};
+			};
+			buildConfigurationList = C42EC88D1F29E5F000864FBA /* Build configuration list for PBXProject "BattleOfMesoketes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C42EC8891F29E5F000864FBA;
+			productRefGroup = C42EC8931F29E5F000864FBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C42EC8911F29E5F000864FBA /* BattleOfMesoketes */,
+				C42EC8A21F29E5F100864FBA /* BattleOfMesoketesTests */,
+				C42EC8AD1F29E5F100864FBA /* BattleOfMesoketesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C42EC8901F29E5F000864FBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42EC89A1F29E5F000864FBA /* Assets.xcassets in Resources */,
+				C42EC89D1F29E5F000864FBA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C42EC8A11F29E5F100864FBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C42EC8AC1F29E5F100864FBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C42EC88E1F29E5F000864FBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42EC8981F29E5F000864FBA /* ViewController.swift in Sources */,
+				C42EC8961F29E5F000864FBA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C42EC89F1F29E5F100864FBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42EC8A81F29E5F100864FBA /* BattleOfMesoketesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C42EC8AA1F29E5F100864FBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42EC8B31F29E5F100864FBA /* BattleOfMesoketesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C42EC8A51F29E5F100864FBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C42EC8911F29E5F000864FBA /* BattleOfMesoketes */;
+			targetProxy = C42EC8A41F29E5F100864FBA /* PBXContainerItemProxy */;
+		};
+		C42EC8B01F29E5F100864FBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C42EC8911F29E5F000864FBA /* BattleOfMesoketes */;
+			targetProxy = C42EC8AF1F29E5F100864FBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C42EC89B1F29E5F000864FBA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C42EC89C1F29E5F000864FBA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C42EC8B51F29E5F100864FBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C42EC8B61F29E5F100864FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		C42EC8B81F29E5F100864FBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BattleOfMesoketes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = radha.kr.BattleOfMesoketes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C42EC8B91F29E5F100864FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BattleOfMesoketes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = radha.kr.BattleOfMesoketes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C42EC8BB1F29E5F100864FBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BattleOfMesoketesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = radha.kr.BattleOfMesoketesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BattleOfMesoketes.app/Contents/MacOS/BattleOfMesoketes";
+			};
+			name = Debug;
+		};
+		C42EC8BC1F29E5F100864FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BattleOfMesoketesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = radha.kr.BattleOfMesoketesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BattleOfMesoketes.app/Contents/MacOS/BattleOfMesoketes";
+			};
+			name = Release;
+		};
+		C42EC8BE1F29E5F100864FBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BattleOfMesoketesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = radha.kr.BattleOfMesoketesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BattleOfMesoketes;
+			};
+			name = Debug;
+		};
+		C42EC8BF1F29E5F100864FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BattleOfMesoketesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = radha.kr.BattleOfMesoketesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BattleOfMesoketes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C42EC88D1F29E5F000864FBA /* Build configuration list for PBXProject "BattleOfMesoketes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42EC8B51F29E5F100864FBA /* Debug */,
+				C42EC8B61F29E5F100864FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C42EC8B71F29E5F100864FBA /* Build configuration list for PBXNativeTarget "BattleOfMesoketes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42EC8B81F29E5F100864FBA /* Debug */,
+				C42EC8B91F29E5F100864FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C42EC8BA1F29E5F100864FBA /* Build configuration list for PBXNativeTarget "BattleOfMesoketesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42EC8BB1F29E5F100864FBA /* Debug */,
+				C42EC8BC1F29E5F100864FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C42EC8BD1F29E5F100864FBA /* Build configuration list for PBXNativeTarget "BattleOfMesoketesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42EC8BE1F29E5F100864FBA /* Debug */,
+				C42EC8BF1F29E5F100864FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C42EC88A1F29E5F000864FBA /* Project object */;
+}
