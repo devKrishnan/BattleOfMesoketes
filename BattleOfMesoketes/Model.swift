@@ -49,6 +49,23 @@ struct Attack{
         
     }
 }
+struct Fort {
+    private  var wallsMap : [Direction : Wall] = [:]
+    mutating func wall(inDirection direction: Direction, defaultHeight: UInt )->Wall{
+        if let wall = wallsMap[direction]  {
+            return wall
+        }else{
+            let wall = Wall(direction:direction, height: defaultHeight)
+            wallsMap[direction] = wall
+            return wall
+        }
+    }
+    mutating func updateWallHeight(inDirection direction: Direction, height :  UInt){
+        var currentWall = wall(inDirection: direction, defaultHeight: 0)
+        currentWall.height = height
+        wallsMap[direction] = currentWall
+    }
+}
 struct Wall {
     var direction : Direction
     var height : UInt

@@ -39,6 +39,22 @@ class BattleOfMesoketesTests: XCTestCase {
         XCTAssertEqual(sDirection?.rawValue, "S", "Both are not South direction")
         
     }
+    func testFortFactoryImplementation(){
+        var fort = Fort()
+        let north = "N"
+        XCTAssertNotNil(fort, "Invalid fort")
+        if let direction = Direction(rawValue: north){
+            let wall = fort.wall(inDirection: direction, defaultHeight: 0)
+            XCTAssertEqual(wall.height, 0, "THe height of wall should be 0")
+            XCTAssertEqual(wall.direction.rawValue, north, "THe direction of wall should be \(north)")
+            let newHeight : UInt = 1
+            fort.updateWallHeight(inDirection: direction, height: newHeight)
+            let wallUpdatedHeight = fort.wall(inDirection: direction, defaultHeight: 0)
+            XCTAssertEqual(wallUpdatedHeight.height, newHeight, "The heights are not equal. THe updated height of wall should be \(newHeight)")
+            XCTAssertNotEqual(wallUpdatedHeight.height, newHeight + UInt(1), "The height of the walls are equal")
+        }
+        
+    }
     func testWallAttack(){
         if let direction = Direction(rawValue: "N"){
             var wall = Wall(direction: direction, height: 1)
@@ -83,7 +99,7 @@ class BattleOfMesoketesTests: XCTestCase {
         XCTAssertNotEqual(tribe?.tribeName, "2", "Names are Same")
 
     }
-    func testAttack(){
+    func testAttackCreation(){
     
         let json = [
             "tribe": [ "name": "1" ],
