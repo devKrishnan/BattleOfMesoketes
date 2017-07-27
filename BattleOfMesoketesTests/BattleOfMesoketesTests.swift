@@ -39,7 +39,40 @@ class BattleOfMesoketesTests: XCTestCase {
         XCTAssertEqual(sDirection?.rawValue, "S", "Both are not South direction")
         
     }
-    func testWall(){
+    func testWallAttack(){
+        if let direction = Direction(rawValue: "N"){
+            var wall = Wall(direction: direction, height: 1)
+            let json = [
+                "tribe": [ "name": "1" ],
+                "direction": "N",
+                "strength": 3
+                ] as [String : Any]
+            if let attack = Attack(attackJSON: json){
+                XCTAssertTrue(wall.attack(attack: attack), "Attack failed. It should have succeeded")
+                wall.height = 3
+                XCTAssertFalse(wall.attack(attack: attack), "Attack Succeeded. It should have failed")
+                
+            }else{
+                 XCTAssertFalse(true, "attack became nil")
+            }
+            
+        }else{
+             XCTAssertFalse(true, "Direction became nil")
+        }
+    }
+    func testWallCreation(){
+        if let direction = Direction(rawValue: "N"){
+            let wall = Wall(direction: direction, height: 0)
+            XCTAssertNotNil(wall, "nil wall")
+            XCTAssertEqual(wall.direction, direction, "Different direction")
+            XCTAssertEqual(wall.height, 0, "Different height")
+            XCTAssertNotEqual(wall.height, 1, "Different height")
+            XCTAssertNotEqual(wall.direction.rawValue, "W", "Same direction")
+            
+            
+        }else{
+            XCTAssertFalse(true, "Direction became nil")
+        }
         
     }
     func testTribe(){
@@ -120,6 +153,7 @@ class BattleOfMesoketesTests: XCTestCase {
         let invalidDay = Day(dayJSON: invalidJson)
         XCTAssertNil(invalidDay, "valid  JSON")
     }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

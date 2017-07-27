@@ -49,6 +49,18 @@ struct Attack{
         
     }
 }
+struct Wall {
+    var direction : Direction
+    var height : UInt
+    init(direction: Direction, height : UInt) {
+        self.direction = direction
+        self.height = height
+    }
+    func attack(attack : Attack) -> Bool {
+        return height < attack.strength
+    }
+    
+}
 struct Day {
     var dayID : String
     var attacks : [Attack] = []
