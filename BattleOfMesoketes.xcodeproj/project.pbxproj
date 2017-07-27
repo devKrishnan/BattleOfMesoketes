@@ -13,6 +13,14 @@
 		C42EC89D1F29E5F000864FBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42EC89B1F29E5F000864FBA /* Main.storyboard */; };
 		C42EC8A81F29E5F100864FBA /* BattleOfMesoketesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EC8A71F29E5F100864FBA /* BattleOfMesoketesTests.swift */; };
 		C42EC8B31F29E5F100864FBA /* BattleOfMesoketesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EC8B21F29E5F100864FBA /* BattleOfMesoketesUITests.swift */; };
+		C42EC8C11F29E65000864FBA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EC8C01F29E65000864FBA /* Model.swift */; };
+		C42EC8C21F29E65000864FBA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EC8C01F29E65000864FBA /* Model.swift */; };
+		C42EC8C31F29E65000864FBA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EC8C01F29E65000864FBA /* Model.swift */; };
+		C42EC8C51F29E67200864FBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EC8C41F29E67200864FBA /* Constants.swift */; };
+		C42EC8C61F29E67200864FBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EC8C41F29E67200864FBA /* Constants.swift */; };
+		C42EC8C71F29E67200864FBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42EC8C41F29E67200864FBA /* Constants.swift */; };
+		C42EC8C91F29E6EE00864FBA /* war.json in Resources */ = {isa = PBXBuildFile; fileRef = C42EC8C81F29E6EE00864FBA /* war.json */; };
+		C42EC8CA1F29E7D200864FBA /* war.json in Resources */ = {isa = PBXBuildFile; fileRef = C42EC8C81F29E6EE00864FBA /* war.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,9 @@
 		C42EC8AE1F29E5F100864FBA /* BattleOfMesoketesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleOfMesoketesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42EC8B21F29E5F100864FBA /* BattleOfMesoketesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleOfMesoketesUITests.swift; sourceTree = "<group>"; };
 		C42EC8B41F29E5F100864FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C42EC8C01F29E65000864FBA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C42EC8C41F29E67200864FBA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C42EC8C81F29E6EE00864FBA /* war.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = war.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +106,14 @@
 		C42EC8941F29E5F000864FBA /* BattleOfMesoketes */ = {
 			isa = PBXGroup;
 			children = (
+				C42EC8C81F29E6EE00864FBA /* war.json */,
+				C42EC8C41F29E67200864FBA /* Constants.swift */,
 				C42EC8951F29E5F000864FBA /* AppDelegate.swift */,
 				C42EC8971F29E5F000864FBA /* ViewController.swift */,
 				C42EC8991F29E5F000864FBA /* Assets.xcassets */,
 				C42EC89B1F29E5F000864FBA /* Main.storyboard */,
 				C42EC89E1F29E5F000864FBA /* Info.plist */,
+				C42EC8C01F29E65000864FBA /* Model.swift */,
 			);
 			path = BattleOfMesoketes;
 			sourceTree = "<group>";
@@ -231,6 +245,7 @@
 			files = (
 				C42EC89A1F29E5F000864FBA /* Assets.xcassets in Resources */,
 				C42EC89D1F29E5F000864FBA /* Main.storyboard in Resources */,
+				C42EC8C91F29E6EE00864FBA /* war.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42EC8CA1F29E7D200864FBA /* war.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42EC8C11F29E65000864FBA /* Model.swift in Sources */,
 				C42EC8981F29E5F000864FBA /* ViewController.swift in Sources */,
 				C42EC8961F29E5F000864FBA /* AppDelegate.swift in Sources */,
+				C42EC8C51F29E67200864FBA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C42EC8A81F29E5F100864FBA /* BattleOfMesoketesTests.swift in Sources */,
+				C42EC8C21F29E65000864FBA /* Model.swift in Sources */,
+				C42EC8C61F29E67200864FBA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C42EC8B31F29E5F100864FBA /* BattleOfMesoketesUITests.swift in Sources */,
+				C42EC8C31F29E65000864FBA /* Model.swift in Sources */,
+				C42EC8C71F29E67200864FBA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +520,7 @@
 				C42EC8B91F29E5F100864FBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C42EC8BA1F29E5F100864FBA /* Build configuration list for PBXNativeTarget "BattleOfMesoketesTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +529,7 @@
 				C42EC8BC1F29E5F100864FBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C42EC8BD1F29E5F100864FBA /* Build configuration list for PBXNativeTarget "BattleOfMesoketesUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +538,7 @@
 				C42EC8BF1F29E5F100864FBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

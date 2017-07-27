@@ -1,0 +1,131 @@
+{"wars":
+    [
+     {"warID": 1, "days":
+     [{"day" : 1,
+      "attacks": [
+                  {
+                  "tribe": { "name": "1" },
+                  "direction": "N",
+                  "strength": 3
+                  },
+                  {
+                  "tribe": { "name": "2" },
+                  "direction": "S",
+                  "strength": 4
+                  },
+                  {
+                  "tribe": { "name": "3" },
+                  "direction": "W",
+                  "strength": 2
+                  }
+                  ]
+      },
+      {
+      "day" : 2,
+      "attacks": [
+                  {
+                  "tribe": { "name": "1" },
+                  "direction": "E",
+                  "strength": 4
+                  },
+                  {
+                  "tribe": { "name": "2" },
+                  "direction": "N",
+                  "strength": 3
+                  },
+                  {
+                  "tribe": { "name": "3" },
+                  "direction": "S",
+                  "strength": 2
+                  }
+                  ]
+      },
+      {
+      "day" : 3,
+      "attacks": [
+                  {
+                  "tribe": { "name": "1" },
+                  "direction": "W",
+                  "strength": 4
+                  },
+                  {
+                  "tribe": { "name": "2" },
+                  "direction": "E",
+                  "strength": 3
+                  },
+                  {
+                  "tribe": { "name": "3" },
+                  "direction": "N",
+                  "strength": 2
+                  }
+                  ]
+      }
+      ]},
+     {"warID": 2, "days": [{"day" : 1,
+                           "attacks": [
+                                       {
+                                       "tribe": { "name": "1" },
+                                       "direction": "S",
+                                       "strength": 4
+                                       },
+                                       {
+                                       "tribe": { "name": "1" },
+                                       "direction": "N",
+                                       "strength": 2
+                                       },
+                                       {
+                                       "tribe": { "name": "3" },
+                                       "direction": "W",
+                                       "strength": 3
+                                       }
+                                       ]
+                           },
+                           {
+                           "day" : 2,
+                           "attacks": [
+                                       {
+                                       "tribe": { "name": "2" },
+                                       "direction": "S",
+                                       "strength": 5
+                                       },
+                                       {
+                                       "tribe": { "name": "2" },
+                                       "direction": "N",
+                                       "strength": 1
+                                       },
+                                       {
+                                       "tribe": { "name": "3" },
+                                       "direction": "N",
+                                       "strength": 3
+                                       }
+                                       ]
+                           },{
+                           "day" : 3,
+                           "attacks": [
+                                       {
+                                       "tribe": { "name": "1" },
+                                       "direction": "W",
+                                       "strength": 2
+                                       },
+                                       {
+                                       "tribe": { "name": "1" },
+                                       "direction": "W",
+                                       "strength": 4
+                                       },
+                                       {
+                                       "tribe": { "name": "2" },
+                                       "direction": "N",
+                                       "strength": 3
+                                       },
+                                       {
+                                       "tribe": { "name": "2" },
+                                       "direction": "S",
+                                       "strength": 4
+                                       }
+                                       ]
+                           }
+                           ]}
+     
+     ]
+    
+}

@@ -25,7 +25,23 @@ class BattleOfMesoketesTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
+    func testAttack(){
+        
+    }
+    func testDirection(){
+        let direction = Direction(rawValue: "Test")
+        XCTAssertNil(direction, "Invalid direction")
+        let wDirection = Direction(rawValue: "W")
+        XCTAssertNotNil(wDirection, "Valid direction")
+        let eDirection = Direction(rawValue: "E")
+        XCTAssertNotNil(eDirection, "Valid direction ")
+        let nDirection = Direction(rawValue: "N")
+        XCTAssertNotNil(nDirection, "Valid direction ")
+        let sDirection = Direction(rawValue: "S")
+        XCTAssertNotNil(sDirection, "Valid direction direction")
+        XCTAssertEqual(sDirection?.rawValue, "S", "Both are south direction")
+        
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
