@@ -64,9 +64,9 @@ class BattleOfMesoketesTests: XCTestCase {
                 "strength": 3
                 ] as [String : Any]
             if let attack = Attack(attackJSON: json){
-                XCTAssertTrue(wall.attack(attack: attack), "Attack failed. It should have succeeded")
+                XCTAssertTrue(wall.attackSuccess(attack: attack), "Attack failed. It should have succeeded")
                 wall.height = 3
-                XCTAssertFalse(wall.attack(attack: attack), "Attack Succeeded. It should have failed")
+                XCTAssertFalse(wall.attackSuccess(attack: attack), "Attack Succeeded. It should have failed")
                 
             }else{
                  XCTAssertFalse(true, "attack became nil")
@@ -169,12 +169,223 @@ class BattleOfMesoketesTests: XCTestCase {
         let invalidDay = Day(dayJSON: invalidJson)
         XCTAssertNil(invalidDay, "valid  JSON")
     }
-    
+    func testWarModel(){
+        
+        let war1 =  War(warJSON: sampleJSON1())
+        XCTAssertNotNil(war1, "Invalid war object")
+        XCTAssertEqual(war1?.initiateAttack(), 7, "The successcount is not equal")
+        
+        let war2 =  War(warJSON: sampleJSON2())
+        XCTAssertNotNil(war2, "Invalid war object")
+        XCTAssertEqual(war2?.initiateAttack(), 10, "The successcount is not equal")
+        XCTAssertNotEqual(war2?.initiateAttack(), 11, "The successcount is Eqaual")
+        
+        
+        let war3 =  War(warJSON: sampleJSON3())
+        XCTAssertNotNil(war3, "Invalid war object")
+        XCTAssertEqual(war3?.initiateAttack(), 4, "The successcount is not equal")
+        XCTAssertNotEqual(war3?.initiateAttack(), 11, "The successcount is Eqaual")
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
-    
+    func sampleJSON1 ()->[String : Any]{
+        return ["warID": "1", "days":
+            [["day" : "1",
+              "attacks": [
+                [
+                    "tribe": [ "name": "1" ],
+                    "direction": "N",
+                    "strength": 10
+                ],
+                [
+                    "tribe": [ "name": "2" ],
+                    "direction": "S",
+                    "strength": 12
+                ],
+                [
+                    "tribe": [ "name": "3" ],
+                    "direction": "W",
+                    "strength": 12
+                ]
+                ]
+                ],
+             [
+                "day" : "2",
+                "attacks": [
+                    [
+                        "tribe": [ "name": "1" ],
+                        "direction": "E",
+                        "strength":40
+                    ],
+                    [
+                        "tribe": [ "name": "2" ],
+                        "direction": "N",
+                        "strength": 3
+                    ],
+                    [
+                        "tribe": [ "name": "3" ],
+                        "direction": "S",
+                        "strength": 12
+                    ]
+                ]
+                ],
+             [
+                "day" : "3",
+                "attacks": [
+                    [
+                        "tribe": [ "name": "1" ],
+                        "direction": "W",
+                        "strength": 31
+                    ],
+                    [
+                        "tribe": [ "name": "2" ],
+                        "direction": "E",
+                        "strength": 51
+                    ],
+                    [
+                        "tribe": [ "name": "3" ],
+                        "direction": "N",
+                        "strength": 12
+                    ]
+                ]
+                ]
+            ]] as [String : Any]
+    }
+    func sampleJSON2 ()->[String : Any]{
+        return ["warID": "2", "days":
+            [["day" : "1",
+              "attacks": [
+                [
+                    "tribe": [ "name": "1" ],
+                    "direction": "N",
+                    "strength": 10
+                ],
+                [
+                    "tribe": [ "name": "2" ],
+                    "direction": "S",
+                    "strength": 8
+                ],
+                [
+                    "tribe": [ "name": "3" ],
+                    "direction": "W",
+                    "strength": 1
+                ],
+                [
+                    "tribe": [ "name": "3" ],
+                    "direction": "W",
+                    "strength": 10
+                ]
+                ]
+                ],
+             [
+                "day" : "2",
+                "attacks": [
+                    [
+                        "tribe": [ "name": "1" ],
+                        "direction": "E",
+                        "strength":2
+                    ],
+                    [
+                        "tribe": [ "name": "2" ],
+                        "direction": "N",
+                        "strength": 9
+                    ],
+                    [
+                        "tribe": [ "name": "3" ],
+                        "direction": "S",
+                        "strength": 19
+                    ]
+                ]
+                ],
+             [
+                "day" : "3",
+                "attacks": [
+                    [
+                        "tribe": [ "name": "1" ],
+                        "direction": "W",
+                        "strength": 23
+                    ],
+                    [
+                        "tribe": [ "name": "2" ],
+                        "direction": "E",
+                        "strength": 4
+                    ],
+                    [
+                        "tribe": [ "name": "3" ],
+                        "direction": "N",
+                        "strength": 10
+                    ]
+                ]
+                ],
+             [
+                "day" : "4",
+                "attacks": [
+                    [
+                        "tribe": [ "name": "1" ],
+                        "direction": "W",
+                        "strength": 1
+                    ],
+                    [
+                        "tribe": [ "name": "2" ],
+                        "direction": "E",
+                        "strength": 60
+                    ],
+                    [
+                        "tribe": [ "name": "3" ],
+                        "direction": "N",
+                        "strength": 21
+                    ]
+                ]
+                ]
+            ]] as [String : Any]
+    }
+    func sampleJSON3 ()->[String : Any]{
+        return ["warID": "3", "days":
+            [["day" : "1",
+              "attacks": [
+                [
+                    "tribe": [ "name": "1" ],
+                    "direction": "S",
+                    "strength": 1
+                ],
+                [
+                    "tribe": [ "name": "2" ],
+                    "direction": "N",
+                    "strength": 2
+                ],
+                [
+                    "tribe": [ "name": "3" ],
+                    "direction": "W",
+                    "strength": 10
+                ],
+               
+                ]
+                ],
+             [
+                "day" : "2",
+                "attacks": [
+                    [
+                        "tribe": [ "name": "1" ],
+                        "direction": "S",
+                        "strength":1
+                    ],
+                    [
+                        "tribe": [ "name": "2" ],
+                        "direction": "N",
+                        "strength": 2
+                    ],
+                    [
+                        "tribe": [ "name": "3" ],
+                        "direction": "E",
+                        "strength": 10
+                    ]
+                ]
+                ],
+             
+            ]] as [String : Any]
+    }
 }

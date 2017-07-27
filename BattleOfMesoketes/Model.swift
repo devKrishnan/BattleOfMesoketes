@@ -14,6 +14,8 @@ enum Direction : String {
     case West = "W"
     case East = "E"
 }
+
+
 enum DataError: Error {
     case invalidDirection
     case invalidStrength
@@ -22,6 +24,8 @@ enum DataError: Error {
     case invalidFileData
     case invalidWarData
 }
+//Does Tribe play a role at all in the context of solution
+//Does the success depend on the consequtive attack of a single tribe
 struct Tribe {
     var tribeName : String
     init?(tribeJSON: [String: Any]) {
@@ -51,6 +55,7 @@ struct Attack{
 }
 struct Fort {
     private  var wallsMap : [Direction : Wall] = [:]
+    var successfullAttacks : UInt = 0
     mutating func wall(inDirection direction: Direction, defaultHeight: UInt )->Wall{
         if let wall = wallsMap[direction]  {
             return wall
@@ -65,6 +70,10 @@ struct Fort {
         currentWall.height = height
         wallsMap[direction] = currentWall
     }
+    func allDirections() -> [Direction] {
+        let wallsMap : [Direction] = [Direction](self.wallsMap.keys )
+        return wallsMap
+    }
 }
 struct Wall {
     var direction : Direction
@@ -73,7 +82,7 @@ struct Wall {
         self.direction = direction
         self.height = height
     }
-    func attack(attack : Attack) -> Bool {
+    func attackSuccess(attack : Attack) -> Bool {
         return height < attack.strength
     }
     
@@ -95,5 +104,56 @@ struct Day {
             }
             
         }
+    }
+}
+struct War {
+    var days : [Day] = []
+    var warID : String
+    init?(warJSON : [String:Any] ) {
+        
+        guard let warID = warJSON[Constants.warIdKey] as? String
+            else { return nil }
+        guard let daysList = warJSON[Constants.warDaysKey] as? [ [String: Any] ]
+            else { return nil }
+      
+        for dayInfo in daysList {
+            if let day = Day(dayJSON: dayInfo){
+                days.append(day)
+            }else{
+                return nil
+            }
+        }
+        self.warID = warID
+        
+    }
+    func initiateAttack()->UInt {
+        var fort = Fort()
+        //TODO:- What happens if the same Tribe attacks the same wall multiple times.
+        // Lets say they attack 3 times, with same or incresing order of strength. should we consider each attack as success?
+        for day in days {
+            //Used to store the maximum strength applied on each direction of the wall
+            var maximumStrength : [Direction:UInt] = [:]
+            for attack in day.attacks {
+                let wall = fort.wall(inDirection: attack.direction, defaultHeight: Constants.defaultHeightWall)
+                if wall.attackSuccess(attack: attack){
+                    fort.successfullAttacks = fort.successfullAttacks + 1
+                    if let strength = maximumStrength[attack.direction]  {
+                        if  attack.strength > strength {
+                            maximumStrength[attack.direction] = attack.strength
+                        }
+                    }else{
+                        maximumStrength[attack.direction] = attack.strength
+                    }
+                }
+            }
+            //At the end of each day, the walls height is modified according to the maximum strength used on the wall
+            for direction in fort.allDirections(){
+                if let strength = maximumStrength[direction] {
+                    fort.updateWallHeight(inDirection: direction, height: strength)
+                }
+            }
+            
+        }
+        return fort.successfullAttacks
     }
 }
