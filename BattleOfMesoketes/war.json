@@ -1,6 +1,6 @@
 {"wars":
     [
-     {"warID": 1, "days":
+     {"warID": "1", "days":
      [{"day" : "1",
       "attacks": [
                   {
@@ -46,12 +46,12 @@
                   {
                   "tribe": { "name": "1" },
                   "direction": "W",
-                  "strength": 4
+                  "strength": 3
                   },
                   {
                   "tribe": { "name": "2" },
                   "direction": "E",
-                  "strength": 3
+                  "strength": 5
                   },
                   {
                   "tribe": { "name": "3" },
@@ -61,7 +61,7 @@
                   ]
       }
       ]},
-     {"warID": 2, "days": [{"day" : "1",
+     {"warID": "2", "days": [{"day" : "1",
                            "attacks": [
                                        {
                                        "tribe": { "name": "1" },
