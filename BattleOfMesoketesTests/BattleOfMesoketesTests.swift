@@ -25,7 +25,7 @@ class BattleOfMesoketesTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    func testDirection(){
+    func testDirection() {
         let direction = Direction(rawValue: "Test")
         XCTAssertNil(direction, "Valid direction")
         let wDirection = Direction(rawValue: "W")
@@ -37,9 +37,8 @@ class BattleOfMesoketesTests: XCTestCase {
         let sDirection = Direction(rawValue: "S")
         XCTAssertNotNil(sDirection, "Invalid direction direction")
         XCTAssertEqual(sDirection?.rawValue, "S", "Both are not South direction")
-        
     }
-    func testCityFactoryImplementation(){
+    func testCityFactoryImplementation() {
         var fort = City()
         let north = "N"
         XCTAssertNotNil(fort, "Invalid fort")
@@ -55,7 +54,7 @@ class BattleOfMesoketesTests: XCTestCase {
         }
         
     }
-    func testWallAttack(){
+    func testWallAttack() {
         if let direction = Direction(rawValue: "N"){
             var wall = Wall(direction: direction, height: 1)
             let json = [
@@ -63,20 +62,18 @@ class BattleOfMesoketesTests: XCTestCase {
                 "direction": "N",
                 "strength": 3
                 ] as [String : Any]
-            if let attack = Attack(attackJSON: json){
+            if let attack = Attack(attackJSON: json) {
                 XCTAssertTrue(wall.attackSuccess(attack: attack), "Attack failed. It should have succeeded")
                 wall.height = 3
                 XCTAssertFalse(wall.attackSuccess(attack: attack), "Attack Succeeded. It should have failed")
-                
-            }else{
+            }else {
                  XCTAssertFalse(true, "attack became nil")
             }
-            
-        }else{
+        }else {
              XCTAssertFalse(true, "Direction became nil")
         }
     }
-    func testWallCreation(){
+    func testWallCreation() {
         if let direction = Direction(rawValue: "N"){
             let wall = Wall(direction: direction, height: 0)
             XCTAssertNotNil(wall, "nil wall")
@@ -84,14 +81,11 @@ class BattleOfMesoketesTests: XCTestCase {
             XCTAssertEqual(wall.height, 0, "Different height")
             XCTAssertNotEqual(wall.height, 1, "Different height")
             XCTAssertNotEqual(wall.direction.rawValue, "W", "Same direction")
-            
-            
         }else{
             XCTAssertFalse(true, "Direction became nil")
         }
-        
     }
-    func testTribe(){
+    func testTribe() {
         let json = [ "name": "1" ]
         let tribe =  Tribe(tribeJSON: json)
         XCTAssertNotNil(tribe, "Invalid tribe")
@@ -99,8 +93,7 @@ class BattleOfMesoketesTests: XCTestCase {
         XCTAssertNotEqual(tribe?.tribeName, "2", "Names are Same")
 
     }
-    func testAttackCreation(){
-    
+    func testAttackCreation() {
         let json = [
             "tribe": [ "name": "1" ],
             "direction": "N",
@@ -120,7 +113,7 @@ class BattleOfMesoketesTests: XCTestCase {
         let invalidAttack = Attack(attackJSON: invalidJson)
         XCTAssertNotNil(invalidAttack, "Valid attack data")
     }
-    func testDayModel(){
+    func testDayModel() {
         let json : [String : Any] = ["day" : "1",
                                      "attacks": [
                                         [
@@ -169,8 +162,7 @@ class BattleOfMesoketesTests: XCTestCase {
         let invalidDay = Day(dayJSON: invalidJson)
         XCTAssertNil(invalidDay, "valid  JSON")
     }
-    func testWarModel(){
-        
+    func testWarModel() {
         let war1 =  War(warJSON: sampleJSON1())
         XCTAssertNotNil(war1, "Invalid war object")
         XCTAssertEqual(war1?.initiateAttack(), 7, "The successcount is not equal")
@@ -179,7 +171,6 @@ class BattleOfMesoketesTests: XCTestCase {
         XCTAssertNotNil(war2, "Invalid war object")
         XCTAssertEqual(war2?.initiateAttack(), 10, "The successcount is not equal")
         XCTAssertNotEqual(war2?.initiateAttack(), 11, "The successcount is Eqaual")
-        
         
         let war3 =  War(warJSON: sampleJSON3())
         XCTAssertNotNil(war3, "Invalid war object")
@@ -192,7 +183,7 @@ class BattleOfMesoketesTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    func sampleJSON1 ()->[String : Any]{
+    func sampleJSON1 () -> [String : Any] {
         return ["warID": "1", "days":
             [["day" : "1",
               "attacks": [
@@ -255,7 +246,7 @@ class BattleOfMesoketesTests: XCTestCase {
                 ]
             ]] as [String : Any]
     }
-    func sampleJSON2 ()->[String : Any]{
+    func sampleJSON2 () -> [String : Any] {
         return ["warID": "2", "days":
             [["day" : "1",
               "attacks": [
@@ -302,7 +293,7 @@ class BattleOfMesoketesTests: XCTestCase {
                 ]
                 ],
              [
-                "day" : "3",
+                "day": "3",
                 "attacks": [
                     [
                         "tribe": [ "name": "1" ],
@@ -322,7 +313,7 @@ class BattleOfMesoketesTests: XCTestCase {
                 ]
                 ],
              [
-                "day" : "4",
+                "day": "4",
                 "attacks": [
                     [
                         "tribe": [ "name": "1" ],
@@ -366,12 +357,12 @@ class BattleOfMesoketesTests: XCTestCase {
                 ]
                 ],
              [
-                "day" : "2",
+                "day": "2",
                 "attacks": [
                     [
                         "tribe": [ "name": "1" ],
                         "direction": "S",
-                        "strength":1
+                        "strength": 1
                     ],
                     [
                         "tribe": [ "name": "2" ],
@@ -385,7 +376,6 @@ class BattleOfMesoketesTests: XCTestCase {
                     ]
                 ]
                 ],
-             
             ]] as [String : Any]
     }
 }

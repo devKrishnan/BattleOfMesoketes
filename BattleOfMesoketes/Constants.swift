@@ -22,5 +22,5 @@ struct Constants {
     static let eastKey = "E"
     static let westKey = "W"
     static let southKey = "S"
-    static let defaultHeightWall : UInt = 0
+    static let defaultHeightWall: UInt = 0
 }
