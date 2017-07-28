@@ -39,8 +39,8 @@ class BattleOfMesoketesTests: XCTestCase {
         XCTAssertEqual(sDirection?.rawValue, "S", "Both are not South direction")
         
     }
-    func testFortFactoryImplementation(){
-        var fort = Fort()
+    func testCityFactoryImplementation(){
+        var fort = City()
         let north = "N"
         XCTAssertNotNil(fort, "Invalid fort")
         if let direction = Direction(rawValue: north){

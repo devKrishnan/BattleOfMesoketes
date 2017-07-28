@@ -53,7 +53,7 @@ struct Attack{
         
     }
 }
-struct Fort {
+struct City {
     private  var wallsMap : [Direction : Wall] = [:]
     var successfullAttacks : UInt = 0
     mutating func wall(inDirection direction: Direction, defaultHeight: UInt )->Wall{
@@ -127,16 +127,16 @@ struct War {
         
     }
     func initiateAttack()->UInt {
-        var fort = Fort()
+        var city = City()
         //TODO:- What happens if the same Tribe attacks the same wall multiple times.
         // Lets say they attack 3 times, with same or incresing order of strength. should we consider each attack as success?
         for day in days {
             //Used to store the maximum strength applied on each direction of the wall
             var maximumStrength : [Direction:UInt] = [:]
             for attack in day.attacks {
-                let wall = fort.wall(inDirection: attack.direction, defaultHeight: Constants.defaultHeightWall)
+                let wall = city.wall(inDirection: attack.direction, defaultHeight: Constants.defaultHeightWall)
                 if wall.attackSuccess(attack: attack){
-                    fort.successfullAttacks = fort.successfullAttacks + 1
+                    city.successfullAttacks = city.successfullAttacks + 1
                     if let strength = maximumStrength[attack.direction]  {
                         if  attack.strength > strength {
                             maximumStrength[attack.direction] = attack.strength
@@ -147,13 +147,13 @@ struct War {
                 }
             }
             //At the end of each day, the walls height is modified according to the maximum strength used on the wall
-            for direction in fort.allDirections(){
+            for direction in city.allDirections(){
                 if let strength = maximumStrength[direction] {
-                    fort.updateWallHeight(inDirection: direction, height: strength)
+                    city.updateWallHeight(inDirection: direction, height: strength)
                 }
             }
             
         }
-        return fort.successfullAttacks
+        return city.successfullAttacks
     }
 }
